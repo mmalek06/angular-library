@@ -1,0 +1,29 @@
+<div class="book-list">
+    <div class="lds-dual-ring" *ngIf="isLoading" @fadeOut></div>
+</div>
+
+<!-- <template>
+    <SearchInputs 
+        @bookNameSearchRequested="onBookNameSearchRequested" 
+        @authorNameSearchRequested="onAuthorNameSearchRequested" />
+    <div class="book-list">
+        <Transition name="switch" mode="out-in">
+            <div class="lds-dual-ring" v-if="isLoading"></div>
+            <div class="books-wrapper" v-else>
+                <TransitionGroup appear>
+                    <ul :key="'list'" v-if="hasBooksMatchingSearchCriteria">
+                        <li v-for="book in books" :key="book.isbn">
+                            <BookListElement 
+                                :book="book" 
+                                @bookBorrowed="onBookReturnedOrBorrowed" 
+                                @bookReturned="onBookReturnedOrBorrowed" />
+                        </li>
+                    </ul>
+                    <p v-if="!hasBooksMatchingSearchCriteria">
+                        No books match chosen search criteria.
+                    </p>
+                </TransitionGroup>
+            </div>
+        </Transition>
+    </div>
+</template> -->

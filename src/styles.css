@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import 'assets/transitions.css';
+@import 'assets/tooltip.css';
+@import 'assets/buttons.css';
+@import 'assets/inputs.css';
+@import 'assets/errors.css';
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url("assets/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url("assets/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: RobotoLight;
+    src: url("assets/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url("assets/Roboto-Medium.ttf") format("truetype");
+}
+
+body {
+    font-family: 'Open Sans';
+    background: #ece6d9;
+}
+
+h1 {
+    font-family: RobotoBold;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-family: RobotoMedium;
+    letter-spacing: 2px;
+}

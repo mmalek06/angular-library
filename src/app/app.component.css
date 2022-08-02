@@ -1,0 +1,6 @@
+.app {
+    max-width: 1080px;
+    max-width: 960px;
+    min-height: 80px;
+    margin: 40px auto;
+}

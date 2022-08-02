@@ -1,0 +1,10 @@
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #eee;
+    outline: none;
+    width: 305px;
+    padding: 8px 16px;
+}
