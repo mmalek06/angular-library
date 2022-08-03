@@ -6,6 +6,16 @@
         </p>
     </div>
     <div>
+        <div class="tooltip">
+            <button class="{{!book.isBorrowable ? 'blue-big disabled': 'blue-big'}}" (click)="openModal(book.isbn)">
+                Borrow this book (ISBN: {{ book.isbn }}, copies left: {{ book.stock }})
+            </button>
+            <span *ngIf="!book.isBorrowable" class="tooltiptext">This book is out of stock :(</span>
+        </div>
+        <app-modal id="{{book.isbn}}">
+            <h1>A Custom Modal!</h1>
+            <button (click)="closeModal(book.isbn)">Close</button>
+        </app-modal>
         <!-- <BorrowBook :book="book" v-bind="$attrs" />
         <ReturnBook :book="book" v-bind="$attrs" /> -->
     </div>

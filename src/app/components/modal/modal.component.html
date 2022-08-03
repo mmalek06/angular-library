@@ -1,0 +1,6 @@
+<div class="app-modal" *ngIf="isVisible" @fadeIn @fadeOut>
+    <div class="app-modal-body">
+        <ng-content></ng-content>
+    </div>
+</div>
+<div class="app-modal-background" *ngIf="isVisible" @fadeIn @fadeOut></div>

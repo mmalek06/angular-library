@@ -39,3 +39,7 @@ h2 {
     font-family: RobotoMedium;
     letter-spacing: 2px;
 }
+
+app-modal {
+    display: none;
+}

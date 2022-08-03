@@ -8,6 +8,8 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { BookListElementComponent } from './components/book-list-element/book-list-element.component';
 import { SearchInputsComponent } from './components/search-inputs/search-inputs.component';
 import { DebounceKeyupDirective } from './directives/debounce-keyup.directive';
+import { BorrowBookComponent } from './components/borrow-book/borrow-book.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,9 @@ import { DebounceKeyupDirective } from './directives/debounce-keyup.directive';
         BookListComponent,
         BookListElementComponent,
         SearchInputsComponent,
-        DebounceKeyupDirective
+        DebounceKeyupDirective,
+        BorrowBookComponent,
+        ModalComponent
     ],
     imports: [
         BrowserModule,

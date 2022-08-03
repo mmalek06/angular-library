@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import Book from '@/app/models/Book';
+import { ModalService } from '@/app/services/modal.service';
+import BookVM from '@/app/viewmodels/BookVM';
 
 @Component({
     selector: 'app-book-list-element',
@@ -8,10 +9,17 @@ import Book from '@/app/models/Book';
     styleUrls: ['./book-list-element.component.css']
 })
 export class BookListElementComponent implements OnInit {
-    @Input() public book?: Book;
+    @Input() public book?: BookVM;
 
-    constructor() { }
+    constructor(private _modalService: ModalService) { }
 
-    ngOnInit(): void {
+    ngOnInit(): void { }
+
+    openModal(id: string) {
+        this._modalService.open(id);
+    }
+
+    closeModal(id: string) {
+        this._modalService.close(id);
     }
 }
