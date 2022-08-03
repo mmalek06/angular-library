@@ -2,13 +2,16 @@
     (bookNameSearchRequested)="onBookNameSearchRequested($event)" 
     (authorNameSearchRequested)="onAuthorNameSearchRequested($event)"></app-search-inputs>
 <div class="book-list">
-    <div class="lds-dual-ring" *ngIf="isLoading" @fadeOut></div>
-    <div class="books-wrapper" *ngIf="!isLoading" @fadeIn>
-        <ul>
+    <div class="lds-dual-ring" *ngIf="isLoading" @fadeOut @fadeIn></div>
+    <div class="books-wrapper" *ngIf="!isLoading" @fadeIn @fadeOut>
+        <ul *ngIf="hasBooksMatchingSearchCriteria">
             <li *ngFor="let book of books">
                 <app-book-list-element [book]="book"></app-book-list-element>
             </li>
         </ul>
+        <p *ngIf="!hasBooksMatchingSearchCriteria" @fadeIn @fadeOut>
+            No books match chosen search criteria.
+        </p>
     </div>
 </div>
 

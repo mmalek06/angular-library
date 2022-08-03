@@ -37,10 +37,16 @@
 
 .books-wrapper {
     width: 100%;
+    position: relative;
 }
 
 .book-list > * {
     grid-area: inner-div;
+}
+
+.books-wrapper > * {
+    position: absolute;
+    width: 100%;
 }
 
 .book-list ul {

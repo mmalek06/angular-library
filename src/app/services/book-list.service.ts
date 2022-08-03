@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -7,14 +7,23 @@ import Book from '@/app/models/Book';
 import { environment } from '@/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class BookListService {
-  constructor(
-      private _http: HttpClient
-  ) { }
+    constructor(
+        private _http: HttpClient
+    ) { }
 
-  getBooks(): Observable<Book[]> {
-    return this._http.get<Book[]>(`${environment.serverBaseAddress}/library/list-stock`);
-  }
+    getBooks(): Observable<Book[]> {
+        return this._http.get<Book[]>(`${environment.serverBaseAddress}/library/list-stock`);
+    }
+
+    findBooksByName(name: string): Observable<Book[]> {
+        return this._http
+            .get<Book[]>(`${environment.serverBaseAddress}/library/find-book?book-title=${name}`);
+    }
+
+    findBooksByAuthor(name: string): Observable<Book[]> {
+        return this._http.get<Book[]>(`${environment.serverBaseAddress}/library/author-books?author-name=${name}`);
+    }
 }
