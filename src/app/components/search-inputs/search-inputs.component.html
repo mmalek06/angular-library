@@ -1,0 +1,15 @@
+<header>
+    <input 
+        fooDebounceKeyUp
+        [debounceTime]="400"
+        (onEvent)="onBookNameKeyup($event)"
+        type="text" 
+        placeholder="Type in the name of the book you'd like to borrow" />
+    <span>or</span>
+    <input 
+        fooDebounceKeyUp
+        [debounceTime]="400"
+        (onEvent)="onAuthorNameKeyup($event)"
+        type="text" 
+        placeholder="Type in the name of the author of interest"  />
+</header>  

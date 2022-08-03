@@ -1,5 +1,13 @@
+<app-search-inputs></app-search-inputs>
 <div class="book-list">
     <div class="lds-dual-ring" *ngIf="isLoading" @fadeOut></div>
+    <div class="books-wrapper" *ngIf="!isLoading" @fadeIn>
+        <ul>
+            <li *ngFor="let book of books">
+                <app-book-list-element [book]="book"></app-book-list-element>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <!-- <template>

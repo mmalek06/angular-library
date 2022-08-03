@@ -1,0 +1,12 @@
+<div class="book-row" *ngIf="book">
+    <div>
+        <h2>{{ book.title }}</h2>
+        <p class="authors">
+            <span *ngFor="let author of book.authors">{{ author.name }}</span>
+        </p>
+    </div>
+    <div>
+        <!-- <BorrowBook :book="book" v-bind="$attrs" />
+        <ReturnBook :book="book" v-bind="$attrs" /> -->
+    </div>
+</div>

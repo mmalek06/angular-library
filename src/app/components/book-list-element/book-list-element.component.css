@@ -1,0 +1,33 @@
+.book-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+h2 {
+    margin: 0 0 0px;
+    text-transform: capitalize;
+}
+
+.authors {
+    margin: 10px 0;
+    font-family: RobotoLight;
+}
+
+.authors span {
+    text-transform: capitalize;
+}
+
+.authors span:not(:last-child):after {
+    content: ", ";
+}
+
+form input + span {
+    display: block;
+}
+
+.book-form .error-message {
+    width: 305px;
+    padding-top: 10px;
+}
