@@ -1,4 +1,6 @@
-<app-search-inputs></app-search-inputs>
+<app-search-inputs 
+    (bookNameSearchRequested)="onBookNameSearchRequested($event)" 
+    (authorNameSearchRequested)="onAuthorNameSearchRequested($event)"></app-search-inputs>
 <div class="book-list">
     <div class="lds-dual-ring" *ngIf="isLoading" @fadeOut></div>
     <div class="books-wrapper" *ngIf="!isLoading" @fadeIn>

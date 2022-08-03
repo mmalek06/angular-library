@@ -22,4 +22,12 @@ export class BookListComponent implements OnInit {
             this.books = list;
         });
     }
+
+    onBookNameSearchRequested(name: string): void {
+        console.log(name);
+    }
+
+    onAuthorNameSearchRequested(name: string): void {
+        console.log(name);
+    }
 }
