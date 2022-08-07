@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { BookListService } from '@/app/services/book-list.service';
-import { fadeIn, fadeOut } from '@/app/animations';
+import { fadeInOut, fadeOutIn } from '@/app/animations';
 import BookVM from '@/app/viewmodels/BookVM';
 import Book from '@/app/models/Book';
 
@@ -9,7 +9,7 @@ import Book from '@/app/models/Book';
     selector: 'app-book-list',
     templateUrl: './book-list.component.html',
     styleUrls: ['./book-list.component.css'],  
-    animations: [fadeIn, fadeOut]
+    animations: [fadeInOut(), fadeOutIn()]
 })
 export class BookListComponent implements OnInit {
     public isLoading: boolean = true;
